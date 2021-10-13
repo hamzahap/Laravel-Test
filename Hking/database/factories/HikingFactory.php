@@ -21,8 +21,10 @@ class HikingFactory extends Factory
      */
     public function definition()
     {
-        return [
-            //
+        return[
+        'title' => $this->faker->sentence, //Generates a fake sentence
+        'body' => $this->faker->paragraph(30), //generates fake 30 paragraphs
+        'hiking_id' => User::factory() //Generates a User from factory and extracts id
         ];
     }
 }
